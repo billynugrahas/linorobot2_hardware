@@ -16,7 +16,7 @@
 #define DEFAULT_MOTOR
 
 #include <Arduino.h>
-#include <Servo.h> 
+#include <Servo.h>
 
 #include "motor_interface.h"
 
@@ -55,7 +55,8 @@ class Generic2: public MotorInterface
 
             if(pwm_frequency > 0)
             {
-                analogWriteFrequency(pwm_pin_, pwm_frequency);
+                analogWrite(pwm_pin_, pwm_frequency);
+                // analogWriteFrequency(pwm_pin_, pwm_frequency);
             }
             analogWriteResolution(pwm_bits);
 
@@ -99,7 +100,8 @@ class Generic1: public MotorInterface
 
             if(pwm_frequency > 0)
             {
-                analogWriteFrequency(pwm_pin_, pwm_frequency);
+                analogWrite(pwm_pin_, pwm_frequency);
+                // analogWriteFrequency(pwm_pin_, pwm_frequency);
             }
             analogWriteResolution(pwm_bits);
 
@@ -143,8 +145,10 @@ class BTS7960: public MotorInterface
 
             if(pwm_frequency > 0)
             {
-                analogWriteFrequency(in_a_pin_, pwm_frequency);
-                analogWriteFrequency(in_b_pin_, pwm_frequency);
+                analogWrite(in_a_pin_, pwm_frequency);
+                analogWrite(in_b_pin_, pwm_frequency);
+                // analogWriteFrequency(in_a_pin_, pwm_frequency);
+                // analogWriteFrequency(in_b_pin_, pwm_frequency);
 
             }
             analogWriteResolution(pwm_bits);
@@ -164,8 +168,10 @@ class BTS7960: public MotorInterface
 
             if(pwm_frequency > 0)
             {
-                analogWriteFrequency(in_a_pin_, pwm_frequency);
-                analogWriteFrequency(in_b_pin_, pwm_frequency);
+                analogWrite(in_a_pin_, pwm_frequency);
+                analogWrite(in_b_pin_, pwm_frequency);
+                // analogWriteFrequency(in_a_pin_, pwm_frequency);
+                // analogWriteFrequency(in_b_pin_, pwm_frequency);
 
             }
             analogWriteResolution(pwm_bits);
